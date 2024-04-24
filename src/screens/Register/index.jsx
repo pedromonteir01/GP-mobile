@@ -22,7 +22,7 @@ export default function Register({ route }) {
     const [email, setEmail] = useState('');
     const [cnpj, setCnpj] = useState('');
     const [telephone, setTelephone] = useState('');
-    const [contact, setContact] = useState(false);
+    const [contact, setContact] = useState(true);
 
     useEffect(() => {
         if (isUpdate) {
@@ -37,6 +37,10 @@ export default function Register({ route }) {
             clearInputs();
         }
     }, [company, edit]);
+
+    useEffect(() => {
+        selectedRadio == 1 ? setContact(true) : setContact(false);
+    }, [selectedRadio])
 
     const clearInputs = () => {
         setIsUpdate(false);

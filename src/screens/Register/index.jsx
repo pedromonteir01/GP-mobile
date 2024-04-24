@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, Image } from "react-native";
 import styles from "./styles";
 import { useEffect, useState } from "react";
 import listCompanys from "../../models/companys";
@@ -58,9 +58,16 @@ export default function Register({ route }) {
 
     return(
         <View style={styles.container}>
-            <Text>Registre-se</Text>
+            <Image /* photo pelo source={require('imagem link')} */ />
+            <Text>Faça parte da família!</Text>
+            <Text>Cadastre-se como nossa filial e creça conosco!</Text>
+            {/*  Formulário */}
             <View style={styles.forms}>
+                {/*  Campo dos inputs */}
+                <View style={styles.inputField}>
 
+                    
+                </View>
             </View>
         </View>
     );

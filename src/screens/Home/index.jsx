@@ -13,6 +13,7 @@ export default function Home() {
       <TouchButton route="Profile" title="Go to Profile" data={user} />
 
       <TouchButton route="Category" title="Go to Category" />
+      <TouchButton route="Register" title="Go to Categorydwfe" />
     </View>
   );
 }

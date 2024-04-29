@@ -6,7 +6,6 @@ import { useNavigation } from "@react-navigation/native";
 export default function Details({ route }) {
 
     const { data } = route.params;
-    console.log(data);
 
     const navigation = useNavigation();
 

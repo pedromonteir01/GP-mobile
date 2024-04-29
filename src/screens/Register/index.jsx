@@ -14,6 +14,7 @@ export default function Register({ route }) {
     const navigation = useNavigation();
 
     const [isUpdate, setIsUpdate] = useState(edit);
+    console.log(isUpdate);
 
     const [selectedRadio, setSelectedRadio] = useState(1);
 
@@ -25,7 +26,7 @@ export default function Register({ route }) {
     const [contact, setContact] = useState(true);
 
     useEffect(() => {
-        if (isUpdate) {
+        if (edit) {
             setName(company.name);
             setEmail(company.email);
             setCnpj(String(company.cnpj));
@@ -55,7 +56,8 @@ export default function Register({ route }) {
 
     const handleCompany = () => {
         if (isUpdate) {
-            listCompanys.putCompany(company.id, company.name, company.email, company.cnpj, company.telephone, company.contact);
+            listCompanys.putCompany(company.id, name, email, cnpj, telephone, contact);
+            console.log(listCompanys.getCompanyById(company.id));
             clearInputs();
         } else {
             const company = new Company(name, email, cnpj, telephone, contact);
@@ -155,6 +157,11 @@ export default function Register({ route }) {
                     <TouchableOpacity onPress={() => handleCompany()}>
                         <Text>{isUpdate ? 'Atualizar' : 'Cadastrar'}</Text>
                     </TouchableOpacity>
+                    {isUpdate && (
+                    <TouchableOpacity style={styles.registerBtn} onPress={clearInputs}>
+                        <Text style={{ textTransform: 'uppercase' }}>Cancelar Edição</Text>
+                    </TouchableOpacity>
+                )}
                 </View>
                 <Text>Indeciso? Se ainda houver dúvidas</Text>
                 <TouchableOpacity onPress={() => navigation.navigate('Aboutus')}>

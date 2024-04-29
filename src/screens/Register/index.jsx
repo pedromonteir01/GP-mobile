@@ -1,8 +1,8 @@
 import { View, Text, TouchableOpacity, Image, TextInput } from "react-native";
 import styles from "./styles";
 import { useEffect, useState } from "react";
-import listCompanys from "../../models/companys";
-import Company from "../../models/company";
+import listCompanys from "../../models/companys.js";
+import Company from "../../models/company.js";
 import { useNavigation } from "@react-navigation/native";
 import { Feather } from "@expo/vector-icons";
 
@@ -14,6 +14,7 @@ export default function Register({ route }) {
     const navigation = useNavigation();
 
     const [isUpdate, setIsUpdate] = useState(edit);
+    console.log(isUpdate);
 
     const [selectedRadio, setSelectedRadio] = useState(1);
 
@@ -25,7 +26,7 @@ export default function Register({ route }) {
     const [contact, setContact] = useState(true);
 
     useEffect(() => {
-        if (isUpdate) {
+        if (edit) {
             setName(company.name);
             setEmail(company.email);
             setCnpj(String(company.cnpj));
@@ -49,12 +50,14 @@ export default function Register({ route }) {
         setEmail('');
         setCnpj('');
         setTelephone('');
-        setContact('');
+        setContact(true);
+        setSelectedRadio(1);
     }
 
     const handleCompany = () => {
         if (isUpdate) {
-            listCompanys.putCompany(company.id, company.name, company.email, company.cnpj, company.telephone, company.contact);
+            listCompanys.putCompany(company.id, name, email, cnpj, telephone, contact);
+            console.log(listCompanys.getCompanyById(company.id));
             clearInputs();
         } else {
             const company = new Company(name, email, cnpj, telephone, contact);
@@ -66,7 +69,7 @@ export default function Register({ route }) {
 
     return (
         <View style={styles.container}>
-            <Image /* photo pelo source={require('imagem link')} */ />
+
             <Text>Faça parte da família!</Text>
             <Text>Cadastre-se como nossa filial e creça conosco!</Text>
             {/*  Formulário */}
@@ -135,9 +138,7 @@ export default function Register({ route }) {
                                     selectedRadio == 1 ? <View style={styles.radioBg}></View> : null
                                 }
                             </View>
-                            <Text style={styles.radioText}>
-                                Sim
-                            </Text>
+                            <Text style={styles.radioText}>Sim</Text>
                         </View>
                     </TouchableOpacity>
 
@@ -148,20 +149,23 @@ export default function Register({ route }) {
                                     selectedRadio == 2 ? <View style={styles.radioBg}></View> : null
                                 }
                             </View>
-                            <Text style={styles.radioText}>
-                                Não
-                            </Text>
+                            <Text style={styles.radioText}>Não</Text>
                         </View>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.handle}>
                     <TouchableOpacity onPress={() => handleCompany()}>
-                        <Text>{ isUpdate ? 'Atualizar' : 'Cadastrar'}</Text>
+                        <Text>{isUpdate ? 'Atualizar' : 'Cadastrar'}</Text>
                     </TouchableOpacity>
+                    {isUpdate && (
+                    <TouchableOpacity style={styles.registerBtn} onPress={clearInputs}>
+                        <Text style={{ textTransform: 'uppercase' }}>Cancelar Edição</Text>
+                    </TouchableOpacity>
+                )}
                 </View>
                 <Text>Indeciso? Se ainda houver dúvidas</Text>
                 <TouchableOpacity onPress={() => navigation.navigate('Aboutus')}>
-                    <Text style={{color: 'red'}}>Conheça mais um pouco sobre nós!</Text>
+                    <Text style={{ color: 'red' }}>Conheça mais um pouco sobre nós!</Text>
                 </TouchableOpacity>
             </View>
         </View>

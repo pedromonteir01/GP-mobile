@@ -6,21 +6,38 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  button: {
-    marginTop: 20,
-    padding: 10,
-    backgroundColor: "#C9D4FF",
-    borderRadius: 5,
+  container: {
+    flex: 1,
   },
-  user: {
-    marginTop: 20,
-    padding: 10,
-    backgroundColor: "#C9D4FF",
-    borderRadius: 5,
+  image: {
+    flex: 1,
   },
   text: {
-    fontSize: 16,
+    color: 'white',
+    backgroundColor: '#A4B5A0',
+    margin: 30,
+    borderRadius: 8,
+    height: 450,
   },
+  title: {
+    fontSize: 20,
+    marginLeft: 35,
+    marginTop: 50,
+  },
+  title1: {
+    color: '#B499F0',
+  },
+  nomes: {
+    color: '#fff',
+    fontSize: 20,
+    marginTop: 38,
+    marginLeft:12,
+    borderBottomColor: 'white',
+    borderBottomWidth: 2,
+    width: 320,
+    justifyContent: "center",
+    alignItems: "center",
+  }
 });
 
 export default styles;

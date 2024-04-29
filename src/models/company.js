@@ -1,12 +1,14 @@
-import { v4 as uuidv4 } from 'uuid'
-
 export default class Company {
     constructor(name, email, cnpj, telephone, contact) {
-        this.id = uuidv4();
+        this.id = this.generateId();
         this.name = name;
         this.email = email;
         this.cnpj = cnpj;
         this.telephone = telephone;
         this.contact = contact;
+    }
+
+    generateId() {
+        return Math.floor(Math.random() * 9999);
     }
 }

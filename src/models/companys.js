@@ -19,6 +19,11 @@ class CompanysRepository {
     putCompany(id, name, email, cnpj, telephone, contact) {
         const company = this.getCompanyById(id);
 
+        console.log('company:', company);
+
+        console.log(name, email, cnpj, telephone, contact);
+
+
         if(company) {
             company.name = name;
             company.email = email;
@@ -26,6 +31,8 @@ class CompanysRepository {
             company.telephone = telephone;
             company.contact = contact;
         }
+
+        console.log('nova company:', company);
 
         return company;
     }

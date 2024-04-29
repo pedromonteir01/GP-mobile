@@ -1,9 +1,15 @@
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { Feather } from "@expo/vector-icons";
+import { AntDesign } from '@expo/vector-icons';
+import { Entypo } from '@expo/vector-icons';
+
+
 
 import Home from "../screens/Home";
 import Profile from "../screens/Profile";
 import Category from "../screens/Category";
+import Company from "../models/company";
+import Register from "../screens/Register";
 import { user } from "../data/Profile";
 
 const Drawer = createDrawerNavigator();
@@ -17,11 +23,10 @@ const DrawerRoutes = () => {
         options={{
           headerTitle: "",
           drawerIcon: ({ focused }) => (
-            <Feather
-              name="home"
-              size={24}
-              color={focused ? "#131313" : "#D6D6D6"}
-            />
+            <Entypo
+             name="tree"
+              size={24} 
+              color="black" />
           ),
           drawerLabel: "Inicial",
           drawerActiveTintColor: "#131313",
@@ -36,8 +41,8 @@ const DrawerRoutes = () => {
           headerTitle: "",
           drawerIcon: ({ focused }) => (
             <Feather
-              name="user"
-              size={24}
+              name="users"
+              size={25}
               color={focused ? "#131313" : "#D6D6D6"}
             />
           ),
@@ -59,6 +64,41 @@ const DrawerRoutes = () => {
             />
           ),
           drawerLabel: "Categorias",
+          drawerActiveTintColor: "#131313",
+          drawerInactiveTintColor: "#D6D6D6",
+        }}
+      />
+
+      <Drawer.Screen
+        name="Companys"
+        component={Company}
+        options={{
+          headerTitle: ".",
+          drawerIcon: ({ focused }) => (
+            <AntDesign
+              name="enviroment"
+              size={24}
+              color="black" />
+          ),
+          drawerLabel: "Companias",
+          drawerActiveTintColor: "#131313",
+          drawerInactiveTintColor: "#D6D6D6",
+        }}
+      />
+
+      <Drawer.Screen
+        name="Register"
+        component={Register}
+        options={{
+          headerTitle: ".",
+          drawerIcon: ({ focused }) => (
+            <Feather
+              name="list"
+              size={24}
+              color={focused ? "#131313" : "#D6D6D6"}
+            />
+          ),
+          drawerLabel: "Registre-se",
           drawerActiveTintColor: "#131313",
           drawerInactiveTintColor: "#D6D6D6",
         }}

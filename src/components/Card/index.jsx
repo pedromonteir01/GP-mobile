@@ -1,11 +1,11 @@
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import styles from "./styles";
 
-const Card = ({ name }) => {
+const Card = ({ data }) => {
     return(
         <View style={styles.container}>
             <Image source={require('')}/>
-            <Text>{name}</Text>
+            <Text>{data.name}</Text>
         </View>
     )
 }

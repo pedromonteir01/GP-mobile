@@ -3,6 +3,7 @@ import listCompanys from "../../models/companys";
 import styles from "./styles";
 import { useIsFocused, useNavigation } from "@react-navigation/native";
 import { useEffect, useState } from "react";
+import Card from "../../components/Card";
 
 export default function Companys() {
 
@@ -23,11 +24,11 @@ export default function Companys() {
                 <View style={styles.contentCompanys}>
                 {
                     companys > 0 ? (
-                        <View>
-
-                        </View>
+                        companys.map((company) => (
+                            <Card data={company}/>
+                        ))
                     ) : (
-                        <Text>Não há empresas registradas</Text>
+                        <Text> Não há empresas registradas </Text>
                     )
                 }
                 </View>

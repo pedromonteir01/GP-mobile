@@ -49,7 +49,8 @@ export default function Register({ route }) {
         setEmail('');
         setCnpj('');
         setTelephone('');
-        setContact('');
+        setContact(true);
+        setSelectedRadio(1);
     }
 
     const handleCompany = () => {

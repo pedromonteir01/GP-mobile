@@ -89,6 +89,7 @@ const DrawerRoutes = () => {
       <Drawer.Screen
         name="Register"
         component={Register}
+        initialParams={{ company: null, edit: false }}
         options={{
           headerTitle: ".",
           drawerIcon: ({ focused }) => (

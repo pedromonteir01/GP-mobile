@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding:10
+        padding: 10
     },
     radioInputs: {
         display: 'flex',

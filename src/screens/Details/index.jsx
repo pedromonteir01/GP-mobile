@@ -1,21 +1,22 @@
 import { Text, TouchableOpacity, View } from "react-native";
 import styles from "./styles";
-import listCompanys from "../../models/companys";
+import listCompanys from "../../models/companys.js";
 import { useNavigation } from "@react-navigation/native";
 
 export default function Details({ route }) {
 
     const { data } = route.params;
+    console.log(data);
 
     const navigation = useNavigation();
 
     const removeCompany = () => {
-        listCompanys.removeCompany(data.id);
+        listCompanys.deleteCompany(data.id);
         navigation.navigate('Companys');
     }
 
     const editCompany = () => {
-        navigation.navigate('Register', { company: data, edit: true  });
+        navigation.navigate('Register', { company: data, edit: true });
     }
 
     return (
@@ -25,18 +26,14 @@ export default function Details({ route }) {
             <Text>{data.email}</Text>
             <Text>{data.cnpj}</Text>
             <Text>{data.telephone}</Text>
-            <Text>{ contact ? 'Sim' : 'Não'}</Text>
+            <Text>{data.contact ? 'Sim' : 'Não'}</Text>
 
             <TouchableOpacity onPress={editCompany}>
-                <Text>
-                    Editar
-                </Text>
+                <Text>Editar</Text>
             </TouchableOpacity>
 
             <TouchableOpacity onPress={removeCompany}>
-                <Text>
-                    Excluir
-                </Text>
+                <Text>Excluir</Text>
             </TouchableOpacity>
         </View>
     );

@@ -7,7 +7,7 @@ export default function Routes() {
   return (
     <NavigationContainer>
 
-      {<DrawerRoutes />}, {<StackRoutes/>}
+      <DrawerRoutes />
       
       <StatusBar style="auto" />
     </NavigationContainer>

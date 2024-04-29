@@ -5,8 +5,7 @@ import { useNavigation } from "@react-navigation/native";
 const Card = ({ data }) => {
     const navigation = useNavigation();
     return(
-        <TouchableOpacity style={styles.container} onPress={() => navigation.navigate('Details')}>
-            <Image source={require('')}/>
+        <TouchableOpacity style={styles.container} onPress={() => navigation.navigate('Details', { data: data })}>
             <Text>{data.name}</Text>
         </TouchableOpacity>
     )

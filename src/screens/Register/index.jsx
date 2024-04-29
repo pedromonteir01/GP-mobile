@@ -1,8 +1,8 @@
 import { View, Text, TouchableOpacity, Image, TextInput } from "react-native";
 import styles from "./styles";
 import { useEffect, useState } from "react";
-import listCompanys from "../../models/companys";
-import Company from "../../models/company";
+import listCompanys from "../../models/companys.js";
+import Company from "../../models/company.js";
 import { useNavigation } from "@react-navigation/native";
 import { Feather } from "@expo/vector-icons";
 
@@ -67,7 +67,7 @@ export default function Register({ route }) {
 
     return (
         <View style={styles.container}>
-            <Image /* photo pelo source={require('imagem link')} */ />
+
             <Text>Faça parte da família!</Text>
             <Text>Cadastre-se como nossa filial e creça conosco!</Text>
             {/*  Formulário */}
@@ -136,9 +136,7 @@ export default function Register({ route }) {
                                     selectedRadio == 1 ? <View style={styles.radioBg}></View> : null
                                 }
                             </View>
-                            <Text style={styles.radioText}>
-                                Sim
-                            </Text>
+                            <Text style={styles.radioText}>Sim</Text>
                         </View>
                     </TouchableOpacity>
 
@@ -149,20 +147,18 @@ export default function Register({ route }) {
                                     selectedRadio == 2 ? <View style={styles.radioBg}></View> : null
                                 }
                             </View>
-                            <Text style={styles.radioText}>
-                                Não
-                            </Text>
+                            <Text style={styles.radioText}>Não</Text>
                         </View>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.handle}>
                     <TouchableOpacity onPress={() => handleCompany()}>
-                        <Text>{ isUpdate ? 'Atualizar' : 'Cadastrar'}</Text>
+                        <Text>{isUpdate ? 'Atualizar' : 'Cadastrar'}</Text>
                     </TouchableOpacity>
                 </View>
                 <Text>Indeciso? Se ainda houver dúvidas</Text>
                 <TouchableOpacity onPress={() => navigation.navigate('Aboutus')}>
-                    <Text style={{color: 'red'}}>Conheça mais um pouco sobre nós!</Text>
+                    <Text style={{ color: 'red' }}>Conheça mais um pouco sobre nós!</Text>
                 </TouchableOpacity>
             </View>
         </View>

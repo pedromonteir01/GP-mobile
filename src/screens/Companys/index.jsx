@@ -8,29 +8,29 @@ import Card from "../../components/Card";
 export default function Companys() {
 
     const navigation = useNavigation();
-    const [ companys, setCompanys ] = useState([]);
+    const [companys, setCompanys] = useState([]);
     const isFocused = useIsFocused();
 
     useEffect(() => {
-         if(isFocused) {
+        if (isFocused) {
             const list = listCompanys.getAllCompanys();
             setCompanys(list);
-         }
+        }
     }, [isFocused]);
 
-    return(
+    return (
         <View style={styles.container}>
             <ScrollView horizontal={false}>
                 <View style={styles.contentCompanys}>
-                {
-                    companys > 0 ? (
-                        companys.map((company) => (
-                            <Card data={company}/>
-                        ))
-                    ) : (
-                        <Text> Não há empresas registradas </Text>
-                    )
-                }
+                    {
+                        companys.length > 0 ? (
+                            companys.map((company) => (
+                                <Card data={company} key={company.id}/>
+                            ))
+                        ) : (
+                            <Text> Não há empresas registradas </Text>
+                        )
+                    }
                 </View>
             </ScrollView>
         </View>

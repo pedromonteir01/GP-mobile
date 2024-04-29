@@ -11,6 +11,8 @@ import Category from "../screens/Category";
 import Company from "../models/company";
 import Register from "../screens/Register";
 import { user } from "../data/Profile";
+import Companys from "../screens/Companys";
+import Details from "../screens/Details";
 
 const Drawer = createDrawerNavigator();
 
@@ -24,8 +26,8 @@ const DrawerRoutes = () => {
           headerTitle: "",
           drawerIcon: ({ focused }) => (
             <Entypo
-             name="tree"
-              size={24} 
+              name="tree"
+              size={24}
               color="black" />
           ),
           drawerLabel: "Inicial",
@@ -71,7 +73,7 @@ const DrawerRoutes = () => {
 
       <Drawer.Screen
         name="Companys"
-        component={Company}
+        component={Companys}
         options={{
           headerTitle: ".",
           drawerIcon: ({ focused }) => (
@@ -102,6 +104,26 @@ const DrawerRoutes = () => {
           drawerLabel: "Registre-se",
           drawerActiveTintColor: "#131313",
           drawerInactiveTintColor: "#D6D6D6",
+        }}
+      />
+      <Drawer.Screen
+        name="Details"
+        component={Details}
+        initialParams={{ company: null, edit: false }}
+        options={{
+          drawerItemStyle: { display: 'none' },
+          headerTitle: ".",
+          drawerIcon: ({ focused }) => (
+            <Feather
+              name="list"
+              size={24}
+              color={focused ? "#131313" : "#D6D6D6"}
+            />
+          ),
+          drawerLabel: "detalhes",
+          drawerActiveTintColor: "#131313",
+          drawerInactiveTintColor: "#D6D6D6",
+
         }}
       />
     </Drawer.Navigator>

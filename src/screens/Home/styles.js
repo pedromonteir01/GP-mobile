@@ -6,12 +6,22 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  button: {
-    marginTop: 20,
-    padding: 10,
-    backgroundColor: "#C9D4FF",
-    borderRadius: 5,
+  imagem1: {
+    width: 350,
+    height: 250,
+    margin: 30,
+    borderRadius: 15
   },
+  minitexto:{
+    fontSize: 18,
+    margin: 5,
+    marginLeft: 15,
+    fontWeight: 'bold',
+  },
+  textoprincipal: {
+    margin: 5,
+    fontSize: 16
+  }
 });
 
 export default styles;

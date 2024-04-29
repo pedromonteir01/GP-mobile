@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import listCompanys from "../../models/companys";
 import styles from "./styles";
 import { useIsFocused, useNavigation } from "@react-navigation/native";
@@ -19,7 +19,19 @@ export default function Companys() {
 
     return(
         <View style={styles.container}>
+            <ScrollView horizontal={false}>
+                <View style={styles.contentCompanys}>
+                {
+                    companys > 0 ? (
+                        <View>
 
+                        </View>
+                    ) : (
+                        <Text>Não há empresas registradas</Text>
+                    )
+                }
+                </View>
+            </ScrollView>
         </View>
     );
 }

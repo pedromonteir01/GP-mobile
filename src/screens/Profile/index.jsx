@@ -1,28 +1,40 @@
-import { Text, View } from "react-native";
+import { ImageBackground, Text, View } from "react-native";
 
 import styles from "./styles";
-import Title from "../../components/Title";
-import TouchButton from "../../components/TouchButton";
 
 export default function Profile({ route }) {
   const { data } = route.params;
 
   return (
     <View style={styles.container}>
-      <Title title="Profile" />
+      <ImageBackground source={require("../../../assets/images/backGround.jpeg")} resizeMode="cover" style={styles.image}>
+        <Text style={styles.title}>Conheça nosso <Text style={styles.title1}>time</Text>!</Text>
+        <View style={styles.text}>
+          <Text style={styles.nomes}>
+            Nicolly Isabeli
+          </Text>
 
-      <TouchButton route="Home" title="Go to Home" />
+          <Text style={styles.nomes}>
+            Isabela Alcantara
+          </Text>
 
-      <TouchButton route="Category" title="Go to Category" />
+          <Text style={styles.nomes}>
+            Ana Júlia Pontes
+          </Text>
 
-      <View style={styles.user}>
-        <Title title="User" />
-        <Text style={styles.text}>{data.name}</Text>
-        <Text style={styles.text}>{data.email}</Text>
-        <Text style={styles.text}>{data.phone}</Text>
-        <Text style={styles.text}>{data.address.city}</Text>
-        <Text style={styles.text}>{data.address.state}</Text>
-      </View>
+          <Text style={styles.nomes}>
+            Manuela Queiroz
+          </Text>
+
+          <Text style={styles.nomes}>
+            Pedro Monteiro
+          </Text>
+
+          <Text style={styles.nomes}>
+            Felipe Miotto
+          </Text>
+        </View>
+      </ImageBackground>
     </View>
   );
 }

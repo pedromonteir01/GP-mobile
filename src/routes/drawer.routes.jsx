@@ -13,6 +13,7 @@ import Register from "../screens/Register";
 import { user } from "../data/Profile";
 import Companys from "../screens/Companys";
 import Details from "../screens/Details";
+import login from "../screens/Login";
 
 const Drawer = createDrawerNavigator();
 
@@ -106,6 +107,26 @@ const DrawerRoutes = () => {
           drawerInactiveTintColor: "#D6D6D6",
         }}
       />
+
+<Drawer.Screen
+        name="login"
+        component={login}
+        initialParams={{ company: null, edit: false }}
+        options={{
+          headerTitle: ".",
+          drawerIcon: ({ focused }) => (
+            <Feather
+              name="list"
+              size={24}
+              color={focused ? "#131313" : "#D6D6D6"}
+            />
+          ),
+          drawerLabel: "login",
+          drawerActiveTintColor: "#131313",
+          drawerInactiveTintColor: "#D6D6D6",
+        }}
+      />
+
       <Drawer.Screen
         name="Details"
         component={Details}

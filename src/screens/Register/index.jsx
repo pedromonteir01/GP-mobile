@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, Image, TextInput } from "react-native";
+import { View, Text, TouchableOpacity, TextInput } from "react-native";
 import styles from "./styles";
 import { useEffect, useState } from "react";
 import listCompanys from "../../models/companys.js";

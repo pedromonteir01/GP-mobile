@@ -8,7 +8,6 @@ import { Entypo } from '@expo/vector-icons';
 import Home from "../screens/Home";
 import Profile from "../screens/Profile";
 import Category from "../screens/Category";
-import Company from "../models/company";
 import Register from "../screens/Register";
 import { user } from "../data/Profile";
 import Companys from "../screens/Companys";

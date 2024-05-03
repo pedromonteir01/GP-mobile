@@ -1,6 +1,8 @@
 import { View, Text, ImageBackground, ScrollView, Image, onPressButton, TouchableOpacity } from "react-native-web";
 import styles from "./styles";
-
+import AntDesign from '@expo/vector-icons/AntDesign';
+import Feather from '@expo/vector-icons/Feather'
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 export default function login() {
     return (
         <ScrollView>
@@ -27,22 +29,26 @@ export default function login() {
       </TouchableOpacity>
       </View>
 
-      <Text>ou entre com</Text>
+      <Text Text style={styles.subTitle3}>___________ou entre com___________</Text>
 
 
-
+   <View style={styles.icons}> 
+   <AntDesign name="google" size={24}  />
+   <FontAwesome6 name="x-twitter" size={24}  />
+   <FontAwesome6 name="facebook-f" size={24}  />
+   </View>
 
 
 
       <TouchableOpacity
         onPress={onPressButton}
-        style={styles.buttonEntar2}
+        style={styles.buttonEntar} 
       >
-        <Text style={styles.buttonEntar}>Entrar</Text>
+        <Text style={styles.buttonEntar2}>Entrar</Text>
       </TouchableOpacity>
 
-  <Text>Ainda não é um usuário cadastrado?</Text>
-  <Text >Crie sua conta AGORA!</Text>
+  <Text style={styles.subTitle}>Ainda não é um usuário cadastrado?</Text>
+  <Text style={styles.subTitle2}>Crie sua conta agora!</Text>
 
      </View>
       </ScrollView>

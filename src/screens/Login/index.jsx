@@ -51,6 +51,7 @@ export default function login() {
   <Text style={styles.subTitle2}>Crie sua conta agora!</Text>
 
      </View>
+
       </ScrollView>
     )
 };

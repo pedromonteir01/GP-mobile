@@ -3,32 +3,35 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: 10,
-        backgroundColor: '#fff',
+      
     },
     radioInputs: {
         marginRight: 20,
-        marginTop: 50,
-        marginLeft: 20,
+        marginTop: 10,
+        marginLeft: 70,
+        marginBottom:5,
+        display:"flex",
+        flexDirection:"row",
+       
+
     },
     radio: {
         width: 20,
         height: 20,
-        borderColor: 'black',
         borderRadius: 20,
         borderWidth: 3,
         marginTop: 20,
-        marginLeft: 20,
-        
+        marginLeft: 15,
+       
+
     },
     radioText: {
         fontSize: 14,
         marginTop: 20,
-        marginLeft: 20,
+        marginLeft: 16,
         justifyContent: 'center',
         alignItems: 'center',
+   
     },
     wrapper: {
         justifyContent: 'center',
@@ -40,7 +43,10 @@ const styles = StyleSheet.create({
         backgroundColor: 'black',
         height: 10,
         width: 10,
-        margin: 3,
+        marginTop:2,
+        marginLeft:2,
+        display:"flex",
+        flexDirection:"row",
         borderRadius: 20
     },
     handle: {
@@ -61,7 +67,7 @@ const styles = StyleSheet.create({
     },
     inputField: {
         marginTop: 10,
-        width: '100%',
+        width: "80%",
         height: 70,
         flexDirection: 'row', 
         alignItems: 'center',
@@ -76,12 +82,7 @@ const styles = StyleSheet.create({
     inputIcon: {
         marginRight: 10,
     },
-    registerBtn: {
-        backgroundColor: '#007bff', 
-        paddingVertical: 10,
-        paddingHorizontal: 20,
-        borderRadius: 5,
-    },
+   
     registerBtnText: {
         color: '#fff', 
         textTransform: 'uppercase',
@@ -112,11 +113,40 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         marginLeft: 90,
     },
-    // image: {
-    //     flex: 1,
-    //     width: '100%',
-    //     height: '100%'
-    //   },
+
+    logo: {
+        width: "200px",
+        height: "180px",
+        marginLeft: "105px",
+        marginBottom:"25px",
+        alignItems:"center",
+        flexDirection:"row"
+      },
+      image: {
+        flex: 1,
+        width: "100vw",
+        height: "120vh"
+      },
+
+      forms:{
+        marginLeft:50
+      },
+      texto2:{
+        marginTop:40,
+        fontSize:15,
+        marginLeft:25,
+       
+      },
+      texto1:{
+        marginTop:20,
+        marginLeft:25,
+        fontSize:16,
+        marginBottom:10,
+        textAlign:"center"
+      }
+
 });
+
+
 
 export default styles;

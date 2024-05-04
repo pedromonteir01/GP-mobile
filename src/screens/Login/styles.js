@@ -7,8 +7,8 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
-    width: "120vw",
-    height: "100vh"
+    width: "100vw",
+    height: "120vh"
   },
 
   subTitle: {
@@ -29,9 +29,9 @@ const styles = StyleSheet.create({
 
   logo: {
     width: "200px",
-    height: "80px",
-    marginTop: "30px",
-    marginLeft: "90px"
+    height: "180px",
+    marginLeft: "90px",
+    marginTop:"20px"
   },
 
   button: {

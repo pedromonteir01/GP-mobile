@@ -8,7 +8,7 @@ export default function login() {
         <ScrollView>
       <View style={styles.container}>
             <ImageBackground source={require("../../../assets/images/backGround.jpeg")} resizeMode="cover" style={styles.image}></ImageBackground>
-     <Image source={require("../../../assets/images/testeLogo.jpeg")} style={styles.logo} />
+     <Image source={require("../../../assets/images/logo.png")} style={styles.logo} />
      <View>
      <Text style={styles.subTitle} >Já faz parte da nossa família?</Text>
      </View>

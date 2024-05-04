@@ -14,19 +14,24 @@ const styles = StyleSheet.create({
     fontFamily: 'sans-serif',
     color: "#A493C2"
   },
-  blocos: {
-    borderWidth: 3,
-    borderColor: '#BE8BC4',
-    borderStyle: 'solid',
-    borderRadius: 35,
+
+  containerBlocos:{
     margin:20,
-    padding:7,
-    width:"80vw",
-    height:"35vh"
-    
+    padding:5,
+  
   },
 
-
+  blocos: {
+    backgroundColor: '#ffffff',
+    borderRadius: 5,
+    width:"90vw",
+    padding:5,
+    margin:"20px",
+    WebkitBoxShadow: '10px 10px 18px 0px rgba(219,164,219,1)',
+    MozBoxShadow: '10px 10px 18px 0px rgba(219,164,219,1)',
+    boxShadow: '10px 10px 18px 0px rgba(219,164,219,1)',
+  },
+  
   Titulo2:{
     fontSize: 17,
     marginTop: 10,
@@ -34,6 +39,7 @@ const styles = StyleSheet.create({
     fontFamily: 'sans-serif',
     color: "#9AB193"
   },
+
   imagem1: {
     width: 430,
     height: 250,
@@ -61,11 +67,14 @@ const styles = StyleSheet.create({
   },
   subtitulo: {
     fontSize: 18,
-    margin: 12,
+    textAlign:"center",
     color: "#9AB193",
     fontWeight: 'bold',
     fontFamily: 'sans-serif',
   },
+  
+  
+
   textovalores: {
     fontSize: 15,
     margin: 10,
@@ -83,6 +92,25 @@ const styles = StyleSheet.create({
     color: "#9AB193",
     fontWeight: 'bold',
     fontFamily: 'sans-serif',
+  },
+
+  blocoPesquisa: {
+    backgroundColor: '#ffffff',
+    borderRadius: 5,
+    width:"40vw",
+    height:"20vh",
+    padding:5,
+    margin:"20px",
+    WebkitBoxShadow: '10px 10px 5px 0px rgba(193,245,188,1)',
+    MozBoxShadow: '10px 10px 5px 0px rgba(193,245,188,1)',
+    boxShadow: '10px 10px 5px 0px rgba(193,245,188,1)',
+  },
+
+  imgs:{
+    width: 90,
+    height: 40,
+    marginLeft: 3,
+    
   }
 
 });

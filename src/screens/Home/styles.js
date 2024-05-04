@@ -14,6 +14,19 @@ const styles = StyleSheet.create({
     fontFamily: 'sans-serif',
     color: "#A493C2"
   },
+  blocos: {
+    borderWidth: 3,
+    borderColor: '#BE8BC4',
+    borderStyle: 'solid',
+    borderRadius: 35,
+    margin:20,
+    padding:7,
+    width:"80vw",
+    height:"35vh"
+    
+  },
+
+
   Titulo2:{
     fontSize: 17,
     marginTop: 10,

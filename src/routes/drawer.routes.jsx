@@ -132,7 +132,7 @@ const DrawerRoutes = () => {
         initialParams={{ company: null, edit: false }}
         options={{
           drawerItemStyle: { display: 'none' },
-          headerTitle: ".",
+          headerTitle: "Details",
           drawerIcon: ({ focused }) => (
             <Feather
               name="list"

@@ -3,7 +3,12 @@ import styles from "./styles";
 import AntDesign from '@expo/vector-icons/AntDesign';
 import Feather from '@expo/vector-icons/Feather'
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
+import { useNavigation } from "@react-navigation/native";
+
+
 export default function Login() {
+
+  const navigation = useNavigation();
     return (
       
       <View style={styles.container}>
@@ -48,7 +53,9 @@ export default function Login() {
       </TouchableOpacity>
 
   <Text style={styles.subTitle}>Ainda não é um usuário cadastrado?</Text>
-  <Text style={styles.subTitle2}>Crie sua conta agora!</Text>
+  <TouchableOpacity  style={styles.subTitle2} onPress={() => navigation.navigate('Register')}>
+                    <Text style={{ color: 'red' }}>Crie sua conta!</Text>
+                </TouchableOpacity>
 
      </View>
 

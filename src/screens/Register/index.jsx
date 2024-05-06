@@ -69,8 +69,8 @@ export default function Register({ route }) {
 
     return (
         <View style={styles.container}>
-            
-            
+
+
             <ImageBackground source={require("../../../assets/images/backGround.jpeg")} resizeMode="cover" style={styles.image}></ImageBackground>
             <Image source={require("../../../assets/images/logo.png")} style={{ width: 190, height: 150, marginBottom: 15, marginTop: 2 }} />
             <Text style={styles.textoo1} >Faça parte da família!</Text>
@@ -156,17 +156,17 @@ export default function Register({ route }) {
                         </View>
                     </TouchableOpacity>
                 </View>
-              <View style={styles.button} >
-                <View style={styles.handle}>
-                    <TouchableOpacity onPress={() => handleCompany()}>
-                        <Text style={styles.textButton}>{isUpdate ? 'Atualizar' : 'Cadastrar'}</Text>
-                    </TouchableOpacity>
-                    {isUpdate && (
-                        <TouchableOpacity style={styles.registerBtn} onPress={clearInputs}>
-                            <Text style={{ textTransform: 'uppercase' }}>Cancelar Edição</Text>
+                <View style={styles.button} >
+                    <View style={styles.handle}>
+                        <TouchableOpacity onPress={() => handleCompany()}>
+                            <Text style={styles.textButton}>{isUpdate ? 'Atualizar' : 'Cadastrar'}</Text>
                         </TouchableOpacity>
-                    )}
-                </View>
+                        {isUpdate && (
+                            <TouchableOpacity style={styles.registerBtn} onPress={clearInputs}>
+                                <Text style={{ textTransform: 'uppercase' }}>Cancelar Edição</Text>
+                            </TouchableOpacity>
+                        )}
+                    </View>
                 </View>
             </View>
         </View>

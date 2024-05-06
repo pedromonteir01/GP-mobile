@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
         marginRight: 35,
         display: "flex",
         flexDirection: "row",
-        
+
 
 
     },
@@ -71,17 +71,17 @@ const styles = StyleSheet.create({
         width: "88%",
         height: 70,
         flexDirection: 'row',
-        marginLeft:45,
+        marginLeft: 45,
         color: '#fff',
         fontSize: 20,
         marginTop: 10,
-        marginLeft:12,
+        marginLeft: 12,
         borderBottomColor: "#B499F0",
         borderBottomWidth: 2,
         width: "63vw",
         justifyContent: "center",
         alignItems: "center",
-       
+
     },
     inputIcon: {
         marginRight: 20,
@@ -103,11 +103,11 @@ const styles = StyleSheet.create({
 
     forms: {
         marginRight: 7,
-        marginBottom:190,
+        marginBottom: 190,
         width: 380,
         justifyContent: "center",
         alignItems: "center",
-        padding:3
+        padding: 3
 
     },
     texto2: {
@@ -124,27 +124,33 @@ const styles = StyleSheet.create({
         textAlign: "center"
     },
 
-    textoo1:{
-        fontSize:20,
-        color:"#B499F0",
-        marginTop:7
+    textoo1: {
+        fontSize: 20,
+        color: "#B499F0",
+        marginTop: 7
     },
-    textoo2:{
-        
-        marginTop:7
+    textoo2: {
+
+        marginTop: 7
     },
-    
+
     button: {
         backgroundColor: '#B499F0',
         width: 80,
         height: 30,
-        borderRadius:20,
+        borderRadius: 20,
         marginRight: 30,
         marginTop: 20,
 
     },
-  
-    
+    textButton: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        display: 'flex',
+        flexDirection: 'row',
+        marginTop: 3.5,
+    }
+
 
 });
 

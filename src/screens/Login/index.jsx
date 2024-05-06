@@ -3,7 +3,7 @@ import styles from "./styles";
 import AntDesign from '@expo/vector-icons/AntDesign';
 import Feather from '@expo/vector-icons/Feather'
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
-export default function login() {
+export default function Login() {
     return (
         <ScrollView>
       <View style={styles.container}>

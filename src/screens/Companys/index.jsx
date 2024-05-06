@@ -4,6 +4,7 @@ import styles from "./styles";
 import { useIsFocused, useNavigation } from "@react-navigation/native";
 import { useEffect, useState } from "react";
 import Card from "../../components/Card";
+import { ImageBackground } from "react-native-web";
 
 export default function Companys() {
 
@@ -20,15 +21,16 @@ export default function Companys() {
 
     return (
         <View style={styles.container}>
+             <ImageBackground source={require("../../../assets/images/backGround.jpeg")} resizeMode="cover" style={styles.image}></ImageBackground>
             <ScrollView horizontal={false}>
-                <View style={styles.contentCompanys}>
+                <View style={styles.blocoPesquisa1}>
                     {
                         companys.length > 0 ? (
                             companys.map((company) => (
                                 <Card data={company} key={company.id}/>
                             ))
                         ) : (
-                            <Text> Não há empresas registradas </Text>
+                            <Text style={styles.Titulo1}> Não há empresas registradas </Text>
                         )
                     }
                 </View>

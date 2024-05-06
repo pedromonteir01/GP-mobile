@@ -3,18 +3,28 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginBottom:120
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 10,
+        backgroundColor: '#fff',
+        marginBottom: 30
+
     },
     radioInputs: {
         marginRight: 20,
-        marginTop: 10,
-        marginLeft: 70,
-        marginBottom:5,
-        display:"flex",
-        flexDirection:"row",
-       
+        marginTop: 20,
+        marginRight: 35,
+        display: "flex",
+        flexDirection: "row",
+        
+
 
     },
+    formsContainer: {
+        marginBottom: 20
+    },
+
+
     radio: {
         width: 20,
         height: 20,
@@ -22,7 +32,7 @@ const styles = StyleSheet.create({
         borderWidth: 3,
         marginTop: 20,
         marginLeft: 15,
-       
+
 
     },
     radioText: {
@@ -31,119 +41,110 @@ const styles = StyleSheet.create({
         marginLeft: 16,
         justifyContent: 'center',
         alignItems: 'center',
-   
+
     },
+    image: {
+        flex: 1,
+        width: "100vw",
+        height: "105vh"
+    },
+
     wrapper: {
         justifyContent: 'center',
         flexDirection: 'row',
         alignItems: 'center',
-       
+
     },
     radioBg: {
         backgroundColor: 'black',
         height: 10,
         width: 10,
-        marginTop:2,
-        marginLeft:2,
-        display:"flex",
-        flexDirection:"row",
+        marginTop: 2,
+        marginLeft: 2,
+        display: "flex",
+        flexDirection: "row",
         borderRadius: 20
     },
-    handle: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        marginTop: 20,
-    },
-    icon: {
-        width: 90, 
-        height: 90,
-        marginTop: 30,
-        marginBottom: 10,
-        marginLeft: 100,
-    },
-    txt: {
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
+
     inputField: {
         marginTop: 10,
-        width: "80%",
+        width: "88%",
         height: 70,
-        flexDirection: 'row', 
-        alignItems: 'center',
-        borderBottomWidth: 1,
-        borderBottomColor: '#ccc',
-    },
-    input: {
-        flex: 1, 
-        paddingHorizontal: 10, 
-        fontSize: 16, 
+        flexDirection: 'row',
+        marginLeft:45,
+        color: '#fff',
+        fontSize: 20,
+        marginTop: 10,
+        marginLeft:12,
+        borderBottomColor: "#B499F0",
+        borderBottomWidth: 2,
+        width: "63vw",
+        justifyContent: "center",
+        alignItems: "center",
+       
     },
     inputIcon: {
-        marginRight: 10,
+        marginRight: 20,
     },
-   
+    registerBtn: {
+        backgroundColor: '#007bff',
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        borderRadius: 5,
+    },
+
     registerBtnText: {
-        color: '#fff', 
+        color: '#fff',
         textTransform: 'uppercase',
-        fontSize: 16,
-    },
-    button: {
-        backgroundColor: '#B499F0',
-        width: 80,
-        height: 30,
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius:20,
-        marginLeft: 110,
-        marginBottom: 20,
-
-    },
-    textofinal: {
-        marginLeft: 50,
-
-    },
-    texto2: {
-       marginTop: -40,
-       alignItems: 'center',
-       justifyContent: 'center',
-    },
-    icones1: {
-        display: 'flex',
         flexDirection: 'row',
         marginLeft: 90,
     },
 
-    logo: {
-        width: "200px",
-        height: "180px",
-        marginLeft: "105px",
-        marginBottom:"25px",
-        alignItems:"center",
-        flexDirection:"row"
-      },
-      image: {
-        flex: 1,
-        width: "100vw",
-        height: "120vh"
-      },
 
-      forms:{
-        marginLeft:50
-      },
-      texto2:{
-        marginTop:40,
-        fontSize:15,
-        marginLeft:25,
-       
-      },
-      texto1:{
-        marginTop:20,
-        marginLeft:25,
-        fontSize:16,
-        marginBottom:10,
-        textAlign:"center"
-      }
+    forms: {
+        marginRight: 7,
+        marginBottom:190,
+        width: 380,
+        justifyContent: "center",
+        alignItems: "center",
+        padding:3
+
+    },
+    texto2: {
+        marginTop: 40,
+        fontSize: 15,
+        marginLeft: 25,
+
+    },
+    texto1: {
+        marginTop: 20,
+        marginLeft: 25,
+        fontSize: 16,
+        marginBottom: 10,
+        textAlign: "center"
+    },
+
+    textoo1:{
+        fontSize:20,
+        color:"#B499F0",
+        marginTop:7
+    },
+    textoo2:{
+        
+        marginTop:7
+    },
+    
+    button: {
+        backgroundColor: '#B499F0',
+        width: 80,
+        height: 30,
+        borderRadius:20,
+        marginRight: 30,
+        marginTop: 20,
+
+    },
+  
+    
 
 });
 

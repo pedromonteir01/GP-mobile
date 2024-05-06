@@ -23,7 +23,7 @@ const DrawerRoutes = () => {
         name="Home"
         component={Home}
         options={{
-          headerTitle: "",
+          headerTitle: "Home",
           drawerIcon: ({ focused }) => (
             <Entypo
               name="tree"
@@ -40,7 +40,7 @@ const DrawerRoutes = () => {
         component={Profile}
         initialParams={{ data: user }}
         options={{
-          headerTitle: "",
+          headerTitle: "Sobre Nós",
           drawerIcon: ({ focused }) => (
             <Feather
               name="users"
@@ -48,7 +48,7 @@ const DrawerRoutes = () => {
               color={focused ? "#131313" : "#D6D6D6"}
             />
           ),
-          drawerLabel: "Perfil",
+          drawerLabel: "GP",
           drawerActiveTintColor: "#131313",
           drawerInactiveTintColor: "#D6D6D6",
         }}
@@ -75,14 +75,14 @@ const DrawerRoutes = () => {
         name="Companys"
         component={Companys}
         options={{
-          headerTitle: ".",
+          headerTitle: "Parcerias",
           drawerIcon: ({ focused }) => (
             <AntDesign
               name="enviroment"
               size={24}
               color="black" />
           ),
-          drawerLabel: "Companias",
+          drawerLabel: "Parcerias",
           drawerActiveTintColor: "#131313",
           drawerInactiveTintColor: "#D6D6D6",
         }}
@@ -93,7 +93,7 @@ const DrawerRoutes = () => {
         component={Register}
         initialParams={{ company: null, edit: false }}
         options={{
-          headerTitle: ".",
+          headerTitle: "Registre-se",
           drawerIcon: ({ focused }) => (
             <Feather
               name="list"
@@ -112,7 +112,7 @@ const DrawerRoutes = () => {
         component={login}
         initialParams={{ company: null, edit: false }}
         options={{
-          headerTitle: ".",
+          headerTitle: "Faça seu login",
           drawerIcon: ({ focused }) => (
             <Feather
               name="list"
@@ -120,7 +120,7 @@ const DrawerRoutes = () => {
               color={focused ? "#131313" : "#D6D6D6"}
             />
           ),
-          drawerLabel: "login",
+          drawerLabel: "Login",
           drawerActiveTintColor: "#131313",
           drawerInactiveTintColor: "#D6D6D6",
         }}
@@ -140,7 +140,7 @@ const DrawerRoutes = () => {
               color={focused ? "#131313" : "#D6D6D6"}
             />
           ),
-          drawerLabel: "detalhes",
+          drawerLabel: "DETALHES",
           drawerActiveTintColor: "#131313",
           drawerInactiveTintColor: "#D6D6D6",
 

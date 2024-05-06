@@ -78,7 +78,9 @@ const styles = StyleSheet.create({
   },
 
   subTitle2: {
+    marginLeft: 150,
     textAlign: "center",
+    justifyContent: 'center',
     color: "red",
     marginTop: "5px",
     fontSize: "16px"

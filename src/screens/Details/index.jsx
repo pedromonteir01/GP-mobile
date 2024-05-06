@@ -1,7 +1,9 @@
-import { Text, TouchableOpacity, View } from "react-native";
+import { Text, TouchableOpacity, View} from "react-native";
 import styles from "./styles";
 import listCompanys from "../../models/companys.js";
 import { useNavigation } from "@react-navigation/native";
+import { MdDelete } from "react-icons/md";
+import { CiEdit } from "react-icons/ci";
 
 export default function Details({ route }) {
 
@@ -20,20 +22,27 @@ export default function Details({ route }) {
 
     return (
         <View style={styles.container}>
+     
             {/* quando estilizar, adicionar as tags necessarias, pois abaixo so vai ter como faz pra exibir os dados*/}
-            <Text>{data.name}</Text>
-            <Text>{data.email}</Text>
-            <Text>{data.cnpj}</Text>
-            <Text>{data.telephone}</Text>
-            <Text>{data.contact ? 'Sim' : 'Não'}</Text>
-
-            <TouchableOpacity onPress={editCompany}>
-                <Text>Editar</Text>
+            <View style={styles.subContainer}>
+            <Text style={styles.name}>Nome: {data.name}</Text>
+            <Text style={styles.email}>E-mail: {data.email}</Text>
+            <Text style={styles.cnpj}>CNPJ: {data.cnpj}</Text>
+            <Text style={styles.telephone}>Tell: {data.telephone}</Text>
+            <Text style={styles.contact}>Deseja contato: {data.contact ? 'Sim' : 'Não'}</Text>
+            <view style={styles.btnsContainer} >
+            <View style={styles.btns}>
+            <TouchableOpacity style={styles.edit1} onPress={editCompany}>
+                <Text style={styles.edit2}><CiEdit/></Text>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={removeCompany}>
-                <Text>Excluir</Text>
+            <TouchableOpacity style={styles.excluir1} onPress={removeCompany}>
+                <Text style={styles.excluir2}><MdDelete/></Text>
             </TouchableOpacity>
+            </View>
+            </view>
+            </View>
+
         </View>
     );
 }

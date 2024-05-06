@@ -69,7 +69,7 @@ export default function Register({ route }) {
 
     return (
         <View style={styles.container}>
-            <ScrollView>
+           
                 <ImageBackground source={require("../../../assets/images/backGround.jpeg")} resizeMode="cover" style={styles.image}></ImageBackground>
                 <Image source={require("../../../assets/images/logo.png")} style={styles.logo} />
 
@@ -172,7 +172,7 @@ export default function Register({ route }) {
                     
                 </View>
 
-            </ScrollView>
+            
         </View>
     );
 }

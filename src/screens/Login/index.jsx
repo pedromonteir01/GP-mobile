@@ -5,7 +5,7 @@ import Feather from '@expo/vector-icons/Feather'
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 export default function login() {
     return (
-        <ScrollView>
+      
       <View style={styles.container}>
             <ImageBackground source={require("../../../assets/images/backGround.jpeg")} resizeMode="cover" style={styles.image}></ImageBackground>
      <Image source={require("../../../assets/images/logo.png")} style={styles.logo} />
@@ -52,6 +52,6 @@ export default function login() {
 
      </View>
 
-      </ScrollView>
+     
     )
 };

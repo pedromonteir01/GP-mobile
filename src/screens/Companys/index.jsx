@@ -21,19 +21,23 @@ export default function Companys() {
 
     return (
         <View style={styles.container}>
-             <ImageBackground source={require("../../../assets/images/backGround.jpeg")} resizeMode="cover" style={styles.image}></ImageBackground>
+            <ImageBackground source={require("../../../assets/images/backGround.jpeg")} resizeMode="cover" style={styles.image}></ImageBackground>
             <ScrollView horizontal={false}>
-                <View style={styles.blocoPesquisa1}>
-                    {
-                        companys.length > 0 ? (
-                            companys.map((company) => (
-                                <Card data={company} key={company.id}/>
-                            ))
-                        ) : (
-                            <Text style={styles.Titulo1}> Não há empresas registradas </Text>
-                        )
-                    }
-                </View>
+                {
+                    companys.length > 0 ? (
+                        companys.map((company) => (
+                            <View key={company.id} style={styles.blocoPesquisa1}>
+                                <Card data={company} />
+                            </View>
+                        ))
+                    ) : (
+                        <View style={styles.blocoPesquisa1}>
+                        <Text style={styles.Titulo1}> Não há empresas registradas </Text>
+                        </View>
+
+
+                    )
+                }
             </ScrollView>
         </View>
     );

@@ -12,7 +12,7 @@ export default function Login() {
     return (
       
       <View style={styles.container}>
-            <ImageBackground source={require("../../../assets/images/backGround.jpeg")} resizeMode="cover" style={styles.image}></ImageBackground>
+                                                                                           
      <Image source={require("../../../assets/images/logo.png")} style={styles.logo} />
      <View>
      <Text style={styles.subTitle} >Já faz parte da nossa família?</Text>

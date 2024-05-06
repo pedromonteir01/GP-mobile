@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, Image, TextInput } from "react-native";
+import { View, Text, TouchableOpacity, Image, TextInput, ImageBackground } from "react-native";
 import styles from "./styles";
 import { useEffect, useState } from "react";
 import listCompanys from "../../models/companys.js";
@@ -69,9 +69,12 @@ export default function Register({ route }) {
 
     return (
         <View style={styles.container}>
-
-            <Text>Faça parte da família!</Text>
-            <Text>Cadastre-se como nossa filial e creça conosco!</Text>
+            
+            
+            <ImageBackground source={require("../../../assets/images/backGround.jpeg")} resizeMode="cover" style={styles.image}></ImageBackground>
+            <Image source={require("../../../assets/images/logo.png")} style={{ width: 190, height: 150, marginBottom: 15, marginTop: 2 }} />
+            <Text style={styles.textoo1} >Faça parte da família!</Text>
+            <Text style={styles.textoo2}>Cadastre-se como nossa filial e creça conosco!</Text>
             {/*  Formulário */}
             <View style={styles.forms}>
                 {/*  Campo dos inputs */}
@@ -120,7 +123,7 @@ export default function Register({ route }) {
                     <TextInput
                         value={telephone}
                         onChangeText={setTelephone}
-                        placeholder="Telefone(+55)"
+                        placeholder="contato(+55)"
                     />
                     <Feather
                         name="phone"
@@ -153,20 +156,18 @@ export default function Register({ route }) {
                         </View>
                     </TouchableOpacity>
                 </View>
+              <View style={styles.button} >
                 <View style={styles.handle}>
                     <TouchableOpacity onPress={() => handleCompany()}>
-                        <Text>{isUpdate ? 'Atualizar' : 'Cadastrar'}</Text>
+                        <Text style={styles.textButton}>{isUpdate ? 'Atualizar' : 'Cadastrar'}</Text>
                     </TouchableOpacity>
                     {isUpdate && (
-                    <TouchableOpacity style={styles.registerBtn} onPress={clearInputs}>
-                        <Text style={{ textTransform: 'uppercase' }}>Cancelar Edição</Text>
-                    </TouchableOpacity>
-                )}
+                        <TouchableOpacity style={styles.registerBtn} onPress={clearInputs}>
+                            <Text style={{ textTransform: 'uppercase' }}>Cancelar Edição</Text>
+                        </TouchableOpacity>
+                    )}
                 </View>
-                <Text>Indeciso? Se ainda houver dúvidas</Text>
-                <TouchableOpacity onPress={() => navigation.navigate('Aboutus')}>
-                    <Text style={{ color: 'red' }}>Conheça mais um pouco sobre nós!</Text>
-                </TouchableOpacity>
+                </View>
             </View>
         </View>
     );

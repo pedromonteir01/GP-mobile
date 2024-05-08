@@ -2,6 +2,7 @@ import { ImageBackground, Text, View } from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from "./styles";
 import { ScrollView } from "react-native-web";
+import { Feather } from "@expo/vector-icons";
 
 export default function Profile({ route }) {
   const { data } = route.params;
@@ -10,15 +11,15 @@ export default function Profile({ route }) {
     <View style={styles.container}>
       <ScrollView>
 
-        
-      <Text style={styles.minitexto}>Juntos, por um mundo mais verde: GP, agindo hoje para um amanhã sustentável!</Text>
+
+        <Text style={styles.minitexto}>Juntos, por um mundo mais verde: GP, agindo hoje para um amanhã sustentável!</Text>
         <Text style={styles.textoprincipal}>
           Nosso compromisso vai além da fabricação. Na GP, acreditamos que a educação e a
           conscientização são essenciais parapromover uma mudança real. Por isso, dedicamos recursos
           significativos para informar e capacitar nossos clientes, parceiros e comunidades sobre práticas
           sustentáveis e a importância de agir agora para proteger nosso planeta.</Text>
 
-        <Text style={styles.Titulo}>Nossos Valores</Text>
+        <Text style={styles.Titulo}>Nossos Valores ♻ </Text>
 
         <View style={styles.containerBlocos}>
 
@@ -56,31 +57,62 @@ export default function Profile({ route }) {
         <View style={styles.text}>
           <Text style={styles.nomes}>
             Nicolly Isabeli
+            <View style={styles.icons}>
+              <a href="https://github.com/santnii?igsh=MWtwMGJlM2JlcnB2cQ=="> <Feather name="instagram" size={24} color="black" /></a>
+              <a href="http://github.com/santni"><Feather name="github" size={24} color="black" /></a>
+            </View>
           </Text>
 
+
           <Text style={styles.nomes}>
-            Isabela Alcantara
+            Isabela Alcântara
+            <View style={styles.icons}>
+              <a href="http://www.instagram.com/_alcantaraa_?igsh=MWtwMGJlM2JlcnB2cQ=="> <Feather name="instagram" size={24} color="black" /></a>
+              <a href="http://github.com/Belaalcantara"><Feather name="github" size={24} color="black" /></a>
+
+            </View>
           </Text>
 
           <Text style={styles.nomes}>
             Ana Júlia Pontes
+            <View style={styles.icons}>
+              <a href="http://www.instagram.com/anajupontess_?igsh=MWtwMGJlM2JlcnB2cQ=="> <Feather name="instagram" size={24} color="black" /></a>
+              <a href="http://github.com/aninha306"><Feather name="github" size={24} color="black" /></a>
+            </View>
           </Text>
 
           <Text style={styles.nomes}>
             Manuela Queiroz
+
+            <View style={styles.icons}>
+              <a href="http://www.instagram.com/manuumqm?igsh=MWtwMGJlM2JlcnB2cQ=="> <Feather name="instagram" size={24} color="black" /></a>
+              <a href="http://github.com/manuumqm"><Feather name="github" size={24} color="black" /></a>
+            </View>
           </Text>
 
           <Text style={styles.nomes}>
             Pedro Monteiro
+            <View style={styles.icons}>
+              <a href="http://www.instagram.com/monteiropedro__?igsh=MWtwMGJlM2JlcnB2cQ=="> <Feather name="instagram" size={24} color="black" /></a>
+              <a href="http://github.com/pedromonteir01"><Feather name="github" size={24} color="black" /></a>
+            </View>
           </Text>
 
           <Text style={styles.nomes}>
             Felipe Miotto
+            <View style={styles.icons}>
+              <a href="http://www.instagram.com/_alcantaraa_?igsh=MWtwMGJlM2JlcnB2cQ=="> <Feather name="instagram" size={24} color="black" /></a>
+              <a href="http://github.com/miottofelipee"><Feather name="github" size={24} color="black" /></a>
+            </View>
           </Text>
+
+          
+
+
         </View>
 
-        </ScrollView>
-     
+      </ScrollView>
+
     </View>
   );
 }

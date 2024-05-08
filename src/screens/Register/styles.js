@@ -7,17 +7,16 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         padding: 10,
         backgroundColor: '#fff',
-        marginBottom: 30
+      
 
     },
     radioInputs: {
-        marginRight: 20,
-        marginTop: 20,
-        marginRight: 35,
+      
+        marginTop: 10,
         display: "flex",
         flexDirection: "row",
-
-
+        alignItems:"center",
+      
 
     },
     formsContainer: {
@@ -37,7 +36,7 @@ const styles = StyleSheet.create({
     },
     radioText: {
         fontSize: 14,
-        marginTop: 20,
+        marginTop: 15,
         marginLeft: 16,
         justifyContent: 'center',
         alignItems: 'center',
@@ -76,7 +75,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
         marginTop: 10,
         marginLeft: 12,
-        borderBottomColor: "#B499F0",
+        borderBottomColor: "#fff",
         borderBottomWidth: 2,
         width: "63vw",
         justifyContent: "center",
@@ -102,12 +101,15 @@ const styles = StyleSheet.create({
 
 
     forms: {
-        marginRight: 7,
-        marginBottom: 190,
+        marginLeft:9 ,
+        marginBottom: 30,
+        marginTop:20,
         width: 380,
         justifyContent: "center",
         alignItems: "center",
-        padding: 3
+        padding: 3,
+        border: "3px outset #ccb4d9",
+    borderRadius:"10px"
 
     },
     texto2: {
@@ -133,13 +135,18 @@ const styles = StyleSheet.create({
 
         marginTop: 7
     },
+    texto3: {
+
+        marginTop: 15,
+      
+    },
 
     button: {
         backgroundColor: '#B499F0',
         width: 80,
         height: 30,
         borderRadius: 20,
-        marginRight: 30,
+        marginLeft: 10,
         marginTop: 20,
 
     },

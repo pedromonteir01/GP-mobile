@@ -1,4 +1,4 @@
-import { Text, TouchableOpacity, View} from "react-native";
+import { Text, TouchableOpacity, View, ScrollView } from "react-native";
 import styles from "./styles";
 import listCompanys from "../../models/companys.js";
 import { useNavigation } from "@react-navigation/native";
@@ -21,28 +21,33 @@ export default function Details({ route }) {
     }
 
     return (
+
         <View style={styles.container}>
-     
+
             {/* quando estilizar, adicionar as tags necessarias, pois abaixo so vai ter como faz pra exibir os dados*/}
             <View style={styles.subContainer}>
-            <Text style={styles.name}>Nome: {data.name}</Text>
-            <Text style={styles.email}>E-mail: {data.email}</Text>
-            <Text style={styles.cnpj}>CNPJ: {data.cnpj}</Text>
-            <Text style={styles.telephone}>Tell: {data.telephone}</Text>
-            <Text style={styles.contact}>Deseja contato: {data.contact ? 'Sim' : 'Não'}</Text>
-            <view style={styles.btnsContainer} >
-            <View style={styles.btns}>
-            <TouchableOpacity style={styles.edit1} onPress={editCompany}>
-                <Text style={styles.edit2}><CiEdit/></Text>
-            </TouchableOpacity>
+                <Text style={styles.name}>Nome: {data.name}</Text>
+                <Text style={styles.email}>E-mail: {data.email}</Text>
+                <Text style={styles.cnpj}>CNPJ: {data.cnpj}</Text>
+                <Text style={styles.telephone}>Tell: {data.telephone}</Text>
+                <Text style={styles.contact}>Deseja contato: {data.contact ? 'Sim' : 'Não'}</Text>
+                <View style={styles.btnsContainer} >
+                    <View style={styles.btns}>
+                        <TouchableOpacity style={styles.edit1} onPress={editCompany}>
+                            <Text style={styles.edit2}><CiEdit /></Text>
+                        </TouchableOpacity>
 
-            <TouchableOpacity style={styles.excluir1} onPress={removeCompany}>
-                <Text style={styles.excluir2}><MdDelete/></Text>
-            </TouchableOpacity>
-            </View>
-            </view>
-            </View>
+                        <TouchableOpacity style={styles.excluir1} onPress={removeCompany}>
+                            <Text style={styles.excluir2}><MdDelete /></Text>
+                        </TouchableOpacity>
 
+                 
+                    </View>
+                </View>
+            </View>
+            <TouchableOpacity style={styles.subTitle2} onPress={() => navigation.navigate('Register')}>
+                            <Text style={styles.subTitle2}>Voltar para a pagina inicail!</Text>
+                        </TouchableOpacity>
         </View>
     );
 }

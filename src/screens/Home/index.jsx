@@ -28,7 +28,7 @@ export default function Home({ navigation }) {
           source={require("../../../assets/images/gp - sustentabilidade.png")}
         />
         <View style={styles.viewPesquisa}>
-          <Text style={styles.titlePesquisa}>Cheque nossas matérias:</Text>
+          <Text style={styles.titlePesquisa}>Te oferecemos iddo e muito mais👀</Text>
           <View style={styles.carousel}>
             <Carousel
               data={pesquisaImages}

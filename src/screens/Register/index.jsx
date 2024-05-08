@@ -164,8 +164,8 @@ export default function Register({ route }) {
                             <Text style={styles.textButton}>{isUpdate ? 'Atualizar' : 'Cadastrar'}</Text>
                         </TouchableOpacity>
                         {isUpdate && (
-                            <TouchableOpacity style={styles.registerBtn} onPress={clearInputs}>
-                                <Text style={{ textTransform: 'uppercase' }}>Cancelar Edição</Text>
+                            <TouchableOpacity style={styles.button2} onPress={clearInputs}>
+                                <Text style={styles.textButton2}>Cancelar Edição</Text>
                             </TouchableOpacity>
                         )}
                     </View>

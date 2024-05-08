@@ -5,6 +5,7 @@ import listCompanys from "../../models/companys.js";
 import Company from "../../models/company.js";
 import { useNavigation } from "@react-navigation/native";
 import { Feather } from "@expo/vector-icons";
+import { ScrollView } from "react-native-gesture-handler";
 
 
 export default function Register({ route }) {
@@ -68,70 +69,71 @@ export default function Register({ route }) {
     }
 
     return (
-        <View style={styles.container}>
+        <ScrollView>
+
+            <View style={styles.container}>
+            <Image source={require("../../../assets/images/fundoregister.png")} style={{ width: "60vw", height: "20vh", marginBottom: 15, marginTop: 2 }} />
+                <Text style={styles.textoo1} >Faça parte da família!</Text>
+                <Text style={styles.textoo2}>Cadastre-se como nossa filial e creça conosco!</Text>
+                {/*  Formulário */}
+                <View style={styles.forms}>
+                    {/*  Campo dos inputs */}
+                    <View style={styles.inputField}>
+                        <TextInput
+                            value={name}
+                            onChangeText={setName}
+                            placeholder="Razão Social"
+                        />
+                        <Feather
+                            name="home"
+                            size={24}
+                            color={"#000"}
+                        />
+                    </View>
+
+                    <View style={styles.inputField}>
+                        <TextInput
+                            value={email}
+                            onChangeText={setEmail}
+                            placeholder="E-mail"
+                        />
+                        <Feather
+                            name="mail"
+                            size={24}
+                            color={"#000"}
+                        />
+                    </View>
 
 
-            <ImageBackground source={require("../../../assets/images/backGround.jpeg")} resizeMode="cover" style={styles.image}></ImageBackground>
-            <Image source={require("../../../assets/images/logo.png")} style={{ width: 190, height: 150, marginBottom: 15, marginTop: 2 }} />
-            <Text style={styles.textoo1} >Faça parte da família!</Text>
-            <Text style={styles.textoo2}>Cadastre-se como nossa filial e creça conosco!</Text>
-            {/*  Formulário */}
-            <View style={styles.forms}>
-                {/*  Campo dos inputs */}
-                <View style={styles.inputField}>
-                    <TextInput
-                        value={name}
-                        onChangeText={setName}
-                        placeholder="Razão Social"
-                    />
-                    <Feather
-                        name="home"
-                        size={24}
-                        color={"#000"}
-                    />
+                    <View style={styles.inputField}>
+                        <TextInput
+                            value={cnpj}
+                            onChangeText={setCnpj}
+                            placeholder="CNPJ"
+                        />
+                        <Feather
+                            name="map"
+                            size={24}
+                            color={"#000"}
+                        />
+                    </View>
+
+                    <View style={styles.inputField}>
+                        <TextInput
+                            value={telephone}
+                            onChangeText={setTelephone}
+                            placeholder="contato(+55)"
+                        />
+                        <Feather
+                            name="phone"
+                            size={24}
+                            color={"#000"}
+                        />
+                    </View>
+                    {/*  Radio inputs */}
+
                 </View>
-
-                <View style={styles.inputField}>
-                    <TextInput
-                        value={email}
-                        onChangeText={setEmail}
-                        placeholder="E-mail"
-                    />
-                    <Feather
-                        name="mail"
-                        size={24}
-                        color={"#000"}
-                    />
-                </View>
-
-
-                <View style={styles.inputField}>
-                    <TextInput
-                        value={cnpj}
-                        onChangeText={setCnpj}
-                        placeholder="CNPJ"
-                    />
-                    <Feather
-                        name="map"
-                        size={24}
-                        color={"#000"}
-                    />
-                </View>
-
-
-                <View style={styles.inputField}>
-                    <TextInput
-                        value={telephone}
-                        onChangeText={setTelephone}
-                        placeholder="contato(+55)"
-                    />
-                    <Feather
-                        name="phone"
-                        size={24}
-                        color={"#000"}
-                    />
-                </View>
-                {/*  Radio inputs */}
+                <Text style={styles.texto3}>Deseja entrar em contato?</Text>
 
                 <View style={styles.radioInputs}>
                     <TouchableOpacity onPress={() => setSelectedRadio(1)}>
@@ -168,7 +170,6 @@ export default function Register({ route }) {
                         )}
                     </View>
                 </View>
-            </View>
-        </View>
+            </View> </ScrollView>
     );
 }

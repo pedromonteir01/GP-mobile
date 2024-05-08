@@ -17,11 +17,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#A4B5A0',
     margin: 30,
     borderRadius: 8,
-    height: 450,
+    height: 690,
+    marginBottom:20,
   },
   title: {
     fontSize: 20,
-    marginLeft: 35,
+    marginLeft: 75,
     marginTop: 50,
   },
   title1: {
@@ -34,7 +35,7 @@ const styles = StyleSheet.create({
     marginLeft:12,
     borderBottomColor: 'white',
     borderBottomWidth: 2,
-    width: 340,
+    width: 300,
     justifyContent: "center",
     alignItems: "center",
   },
@@ -44,7 +45,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     width:"90vw",
     padding:5,
-    margin:"20px",
+    margin:"10px",
     WebkitBoxShadow: '10px 10px 18px 0px rgba(219,164,219,1)',
     MozBoxShadow: '10px 10px 18px 0px rgba(219,164,219,1)',
     boxShadow: '10px 10px 18px 0px rgba(219,164,219,1)',
@@ -60,7 +61,9 @@ const styles = StyleSheet.create({
   
   
   minitexto: {
-    fontSize: 18,
+    fontSize: 23,
+    marginBottom:20,
+    marginTop:10,
     margin: 5,
     marginLeft: 15,
     fontWeight: 'bold',
@@ -74,7 +77,9 @@ const styles = StyleSheet.create({
   },
   Titulo: {
     fontSize: 23,
-    margin: 20,
+    marginLeft: 60,
+    marginBottom:20,
+    marginTop:20,
     fontWeight: 'bold',
     fontFamily: 'sans-serif',
     color: "#9AB193"
@@ -106,6 +111,15 @@ const styles = StyleSheet.create({
     color: "#9AB193",
     fontWeight: 'bold',
     fontFamily: 'sans-serif',
+  },
+
+  icons:{
+     flexDirection:"row",
+     display:"flex",
+    textDecorationColor:"none",
+    marginTop:20,
+    
+  
   },
 
 });

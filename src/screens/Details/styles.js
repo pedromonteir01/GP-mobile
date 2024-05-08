@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         padding: 5,
-        backgroundColor: '#F1EBEB',
+        backgroundColor: '#F6F6F6',
     },
     image: {
         flex: 1,
@@ -21,6 +21,8 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         width: '80%',
         backgroundColor: '#fff',
+        boxShadow: 'rgba(0, 0, 0, 0.45) 0px 25px 20px -20px'
+
     },
     name: {
         fontSize: 16,
@@ -74,6 +76,11 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         gap: 6
+    },
+    subTitle2:{
+        marginTop:100,
+        fontSize:20,
+        color:"#A493C2"
     }
 });
 

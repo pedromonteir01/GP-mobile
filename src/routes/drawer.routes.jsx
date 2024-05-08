@@ -7,12 +7,11 @@ import { Entypo } from '@expo/vector-icons';
 
 import Home from "../screens/Home";
 import Profile from "../screens/Profile";
-import Category from "../screens/Category";
 import Register from "../screens/Register";
 import { user } from "../data/Profile";
-import Companys from "../screens/Companys";
 import Details from "../screens/Details";
 import login from "../screens/Login";
+import Companys from "../screens/Companys";
 
 const Drawer = createDrawerNavigator();
 
@@ -49,23 +48,6 @@ const DrawerRoutes = () => {
             />
           ),
           drawerLabel: "GP",
-          drawerActiveTintColor: "#131313",
-          drawerInactiveTintColor: "#D6D6D6",
-        }}
-      />
-      <Drawer.Screen
-        name="Category"
-        component={Category}
-        options={{
-          headerTitle: "",
-          drawerIcon: ({ focused }) => (
-            <Feather
-              name="list"
-              size={24}
-              color={focused ? "#131313" : "#D6D6D6"}
-            />
-          ),
-          drawerLabel: "Categorias",
           drawerActiveTintColor: "#131313",
           drawerInactiveTintColor: "#D6D6D6",
         }}

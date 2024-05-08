@@ -150,14 +150,24 @@ const styles = StyleSheet.create({
         marginTop: 20,
 
     },
+    
     textButton: {
         alignItems: 'center',
         justifyContent: 'center',
         display: 'flex',
         flexDirection: 'row',
         marginTop: 3.5,
-    }
+    },
+    textButton2: {
+       
+        alignItems: 'center',
+        justifyContent: 'center',
+        display: 'flex',
+        flexDirection: 'row',
+        marginTop: 3.5,
+        fontSize:15,
 
+    }
 
 });
 
